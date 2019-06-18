@@ -4,3 +4,6 @@ logger.info("hello info");
 logger.trace("hello trace");
 logger.error("hello error");
 logger.warn("hello warn");
+
+logger.info("obj", { objY: "str" });
+logger.info("obj", ["arr", "abc"]);
