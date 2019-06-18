@@ -1,11 +1,12 @@
 {
-  "name": "log",
-  "version": "0.0.1",
+  "name": "@brajs/log",
+  "version": "0.0.2",
   "description": "Log para aplicações brajs",
   "main": "index.js",
   "scripts": {
     "test": "node test.js",
-    "test:prod": "NODE_ENV=production node test.js"
+    "test:prod": "NODE_ENV=production node test.js",
+    "publish-public": "yarn publish --access public"
   },
   "repository": {
     "type": "git",
