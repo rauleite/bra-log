@@ -1,6 +1,6 @@
 {
   "name": "@brajs/log",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Log para aplicações brajs",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/rauleite/bra-log#readme",
   "dependencies": {
-    "consola": "^2.7.1",
     "pino": "^5.12.6",
     "pino-pretty": "^3.1.0"
   }
