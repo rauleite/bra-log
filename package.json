@@ -1,6 +1,6 @@
 {
   "name": "@brajs/log",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Log para aplicações brajs",
   "main": "index.js",
   "scripts": {
