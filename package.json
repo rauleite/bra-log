@@ -1,0 +1,30 @@
+{
+  "name": "log",
+  "version": "0.0.1",
+  "description": "Log para aplicações brajs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "test:prod": "NODE_ENV=production node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rauleite/bra-log.git"
+  },
+  "keywords": [
+    "@bra",
+    "log",
+    "logger"
+  ],
+  "author": "Raul Abreu Leite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rauleite/bra-log/issues"
+  },
+  "homepage": "https://github.com/rauleite/bra-log#readme",
+  "dependencies": {
+    "consola": "^2.7.1",
+    "pino": "^5.12.6",
+    "pino-pretty": "^3.1.0"
+  }
+}
