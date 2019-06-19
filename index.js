@@ -1,25 +1,42 @@
 const pino = require("pino");
+const consola = require("consola");
 
 const dev = process.env.NODE_ENV !== "production";
 let logger = null;
+
+const backend = typeof window === "undefined";
+
+const optionsProd = {
+  useLevelLabels: true,
+  level: 30
+};
+
 if (dev) {
-  logger = pino({
-    timestamp: false,
-    level: 10,
-    base: { pid: null },
-    prettyPrint: {
-      colorize: true,
-      timestampKey: false
-    }
-  });
+  if (backend) {
+    // logger = pino(optionsDev);
+    logger = consola;
+  } else {
+    // logger = pino(optionsDevBrowser);
+    logger = consola;
+  }
 } else {
-  logger = pino(
-    {
-      useLevelLabels: true,
-      level: 40
-    },
-    pino.destination("bra.log")
-  );
+  if (backend) {
+    logger = pino(optionsProd, pino.destination("bra.log"));
+  } else {
+    logger = consola;
+  }
 }
 
 module.exports = logger;
+
+// const optionsDev = {
+//   timestamp: false,
+//   level: 10,
+//   base: { pid: null },
+//   prettyPrint: {
+//     colorize: true,
+//     timestampKey: false
+//   }
+// };
+
+// const optionsDevBrowser = { ...optionsDev, browser: { asObject: true } };

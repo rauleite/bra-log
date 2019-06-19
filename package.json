@@ -1,10 +1,10 @@
 {
   "name": "@brajs/log",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Log para aplicações brajs",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js",
+    "test": "cross-env CONSOLA_LEVEL=5 node test.js",
     "test:prod": "NODE_ENV=production node test.js",
     "publish-public": "yarn publish --access public"
   },
@@ -24,7 +24,11 @@
   },
   "homepage": "https://github.com/rauleite/bra-log#readme",
   "dependencies": {
+    "consola": "^2.9.0",
     "pino": "^5.12.6",
     "pino-pretty": "^3.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
   }
 }

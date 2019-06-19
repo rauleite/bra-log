@@ -2,9 +2,9 @@
 
 `yarn add @brajs/log`
 
-Utilizado [pino](https://github.com/pinojs/pino) log, por ter recursos do Winston, com o adicional de suportar Browser e ter API simplificada.
+- Utiliza [pino](https://github.com/pinojs/pino), para escrita de arquivo. Pino tem recursos do Winston, com vantagem de suporte à Universal/SSR.
 
-É possível utilizar todas as features do [pino](https://github.com/pinojs/pino/blob/master/docs/api.md).
+- Utiliza [consola](https://github.com/nuxt/consola), para escrita no console em ambiente de desenvolvimento
 
 ## Customizações para o app
 
@@ -13,11 +13,17 @@ Utilizado [pino](https://github.com/pinojs/pino) log, por ter recursos do Winsto
 #### Desenvolvimento:
 
 - Apenas no console (Node ou Browser).
+
 - Todos os níveis, de Trace à Error
-  -- **Trace**: Usar para informar o ponto da execução, ex: `logger.trace('entrou em funcaoX')`
-  -- **Debug**: Usar para informar qualquer coisa, exceto relacionado ao _Trace_, ex: `logger.info('obj', objY)`
+
+  - **Trace**: Usar para informar o ponto da execução, ex: `logger.trace('entrou em funcaoX')`
+
+  - **Debug**: Usar para informações técnicas, ex: `logger.debug('obj', objY)`
+
+  - **Info**: Usar para informações presentes em produção, ex: `logger.info('obj', objY)`
 
 #### Produção
 
 - Apenas loga no arquivo _bra.log_.
-- Somente os níveis Warn e Error.
+
+- Níveis **Info**, **Warn**, **Error**.
